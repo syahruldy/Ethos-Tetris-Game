@@ -378,7 +378,7 @@ renderHighScores();
   renderHighScores();
 
   let rewardCode = null;
-  if (score >= 1000) {
+  if (score >= 10) {
     rewardCode = generateCode();
   }
 
@@ -387,13 +387,13 @@ renderHighScores();
     <h1>Game Over</h1>
     <p>
       ${
-        score >= 1000
+        score >= 10
           ? "🎉 Congratulations! You passed the score and can claim the code"
           : "😢 Sorry, you need to pass 1000 score to get the code. Please try again!"
       }
     </p>
     ${
-      score >= 1000
+      score >= 10
         ? `<p><strong>Your code is:</strong> ${rewardCode}</p><p>open https://ethos.vision and claim your $AIR Airdrop!</p>`
         : ""
     }
@@ -458,3 +458,4 @@ function renderHighScores() {
   </script>
 </body>
 </html>
+
